@@ -45,6 +45,8 @@ cp .env.example .env
 Run the dev server:
 ```bash
 npm run dev
+# If you run Nuxt manually, ensure it binds to all interfaces on port 3000:
+# npx nuxi dev --host 0.0.0.0 --port 3000
 ```
 App will be available at http://localhost:3000
 
