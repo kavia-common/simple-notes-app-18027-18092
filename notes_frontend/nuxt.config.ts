@@ -39,7 +39,11 @@ export default defineNuxtConfig({
   vite: {
     server: {
       host: '0.0.0.0',
-      allowedHosts: true,
+      // Explicitly allow the cloud preview/proxy host to avoid blocked requests
+      // See: https://vitejs.dev/config/server-options.html#server-allowedhosts
+      allowedHosts: [
+        'vscode-internal-35669-qa.qa01.cloud.kavia.ai',
+      ],
       port: 3000,
     },
   },
